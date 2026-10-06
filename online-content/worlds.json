@@ -1,0 +1,98 @@
+{
+ "version": 2,
+ "worlds": [
+  {
+   "id": "ice",
+   "name": "Ice Cave",
+   "emoji": "🧊",
+   "tagline": "Frozen puzzles under the snow",
+   "desc": "Snow, fog and ice",
+   "count": 20,
+   "fx": "ice",
+   "featured": true,
+   "levels": "ice-cave/levels.json",
+   "music": "ice-cave/music.mp3",
+   "anim": {
+    "combo-2": "ice-cave/anim/combo-2.webp",
+    "combo-3": "ice-cave/anim/combo-3.webp",
+    "combo-4": "ice-cave/anim/combo-4.webp",
+    "combo-5": "ice-cave/anim/combo-5.webp",
+    "win": "ice-cave/anim/win.webp",
+    "lose": "ice-cave/anim/lose.webp"
+   },
+   "color": [
+    "#86c6f7",
+    "#6f95ee"
+   ]
+  },
+  {
+   "id": "jungle",
+   "name": "Jungle Ruins",
+   "emoji": "🌴",
+   "tagline": "Fireflies and ancient stone",
+   "desc": "Fireflies and vines",
+   "count": 20,
+   "fx": "jungle",
+   "levels": "jungle/levels.json",
+   "music": "jungle/music.mp3",
+   "anim": {
+    "combo-2": "jungle/anim/combo-2.webp",
+    "combo-3": "jungle/anim/combo-3.webp",
+    "combo-4": "jungle/anim/combo-4.webp",
+    "combo-5": "jungle/anim/combo-5.webp",
+    "win": "jungle/anim/win.webp",
+    "lose": "jungle/anim/lose.webp"
+   },
+   "color": [
+    "#5fe0b0",
+    "#33b9c4"
+   ]
+  },
+  {
+   "id": "sky",
+   "name": "Sky Islands",
+   "emoji": "☁️",
+   "tagline": "Float above the clouds",
+   "desc": "Clouds and open sky",
+   "count": 20,
+   "fx": "sky",
+   "levels": "sky/levels.json",
+   "music": "sky/music.mp3",
+   "anim": {
+    "combo-2": "sky/anim/combo-2.webp",
+    "combo-3": "sky/anim/combo-3.webp",
+    "combo-4": "sky/anim/combo-4.webp",
+    "combo-5": "sky/anim/combo-5.webp",
+    "win": "sky/anim/win.webp",
+    "lose": "sky/anim/lose.webp"
+   },
+   "color": [
+    "#f7b45e",
+    "#ee8d4a"
+   ]
+  },
+  {
+   "id": "space",
+   "name": "Star Station",
+   "emoji": "🚀",
+   "tagline": "Puzzles among the stars",
+   "desc": "Stars and shooting stars",
+   "count": 20,
+   "fx": "space",
+   "levels": "space/levels.json",
+   "music": "space/music.mp3",
+   "anim": {
+    "combo-2": "space/anim/combo-2.webp",
+    "combo-3": "space/anim/combo-3.webp",
+    "combo-4": "space/anim/combo-4.webp",
+    "combo-5": "space/anim/combo-5.webp",
+    "win": "space/anim/win.webp",
+    "lose": "space/anim/lose.webp"
+   },
+   "color": [
+    "#cf6cf0",
+    "#8a7cf5"
+   ]
+  }
+ ]
+}

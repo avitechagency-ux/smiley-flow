@@ -1,0 +1,21 @@
+// Constants, emoji packs, colors
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],L=s=>[...s.replace(/\s/g,'')];
+const HB=[['\u{1F90D}','\u{1FA76}'],['\u{1F499}','\u{1FA75}'],['\u2764','\u{1FA77}']];
+const PACKS={
+faces:{dir:'faces',n:'Faces',p:0,e:L('😀 😃 😄 😁 😆 😅 🤣 😂 🙂 🙃 🫠 😉 😊 😇 🥰 😍 🤩 😘 😗 😚 😙 🥲 😋 😛 😜 🤪 😝 🤐 🤨 😐 😑 😶 🫥 😏 😒 🙄 😬 🤥 😌 😔 😪 🤤 😴 😷 🤒 🤕 🥴 😵 🤯 🤠 🥳 🥸 😎 🤓 🧐 😕 🫤 😟 🙁 😮 😯 😲 😳 🥺 🥹 😦 😧 😨 😰 😥 😢 😭 😱 😖 😣 😞 😓 😩 😫 🥱 😤 😡 😠 🤬')},
+animals:{dir:'animals',n:'Animals',p:20,e:L('🐕 🐈 🐩 🦮 🐎 🐄 🐂 🐃 🐖 🐑 🐏 🐐 🐪 🐫 🦙 🦒 🐘 🦣 🦏 🦛 🐁 🐀 🐇 🦔 🦇 🦘 🦥 🦦 🦨 🦡 🦫 🐅 🐆 🦓 🦌 🦬 🐒 🦍 🦧 🐓 🦃 🦆 🦢 🦉 🦩 🦚 🦜 🐧 🐦 🐤 🦅 🦤 🐊 🐢 🦎 🐍 🦕 🦖 🐳 🐋 🐬 🦭 🐟 🐠 🐡 🦈 🐙 🦑 🦐 🦞 🦀 🐌 🦋 🐛 🐜 🐝 🐞 🦗 🦂 🦟')},
+fruits:{dir:'fruits-veg',n:'Fruits & Veg',p:20,e:L('🍇 🍈 🍉 🍊 🍋 🍌 🍍 🥭 🍎 🍏 🍐 🍑 🍒 🍓 🫐 🥝 🍅 🫒 🥥 🥑 🍆 🥔 🥕 🌽 🫑 🥒 🥬 🥦 🧄 🧅 🍠')},
+hearts:{dir:'hearts',n:'Hearts',p:30,e:['\u2764',...L('🧡💛💚💙💜🖤🤎🤍🩶🩵🩷')],bad:(a,b)=>HB.some(p=>p.includes(a)&&p.includes(b))},
+time:{dir:'time',n:'Clocks',p:30,e:Array.from({length:24},(_,i)=>String.fromCodePoint(0x1f550+i)),bad:(a,b)=>Math.abs(a.codePointAt(0)-b.codePointAt(0))===12}};
+const COLS=['#e63946','#2a9d8f','#f4a261','#457b9d','#9b5de5','#06d6a0','#ef476f','#8d99ae','#ffd166','#118ab2','#00b4d8','#f72585'],MAXL=LEVELS.length;
+// Levels unlock one by one. For testing, open the game with ?unlock at the end of the address to unlock everything.
+const TEST_UNLOCK=(typeof location!=='undefined'&&/unlock/.test(location.search))?999:1;
+// Board and game-screen themes (fx = moving effect drawn in js/world.js)
+const BG_THEMES={neon:{n:'Neon',p:0,fx:''},ice:{n:'Snowy Biome',p:20,fx:'ice'},jungle:{n:'Jungle',p:20,fx:'jungle'},sky:{n:'Sky',p:30,fx:'sky'},space:{n:'Space',p:30,fx:'space'}};
+// Economy (diamonds)
+const RANDOM_REWARD=1; // diamonds for a random level
+const START_DIAMONDS=10,LEVEL_REWARD=1,DAILY_REWARD=2,HINT_COST=5,EXTEND_COST=3;
+// Online content (worlds). Local folder for testing; for release use e.g. https://cdn.jsdelivr.net/gh/<user>/<repo>@main/online-content/
+const ONLINE_BASE='online-content/';
+const UNDO_COST=0;      // set to 3 when you want undo to cost diamonds
+const AD_REWARD=2,ADS_ENABLED=false; // rewarded ad = +2 diamonds, turn on when ads are integrated
